@@ -4,40 +4,44 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Mobile mobile = new Mobile("Samsung", 31, 2, "6.0");
+        Mobile mobile = new Mobile();
         mobile.powerOn();
         mobile.powerOff();
         mobile.call();
-        SmartPhone smartPhone = new SmartPhone("Samsung", 31, 2, "6.0", "10");
+        SmartPhone smartPhone = new SmartPhone();
         smartPhone.runApp();
         smartPhone.call();
         smartPhone.editMail("Производим редактирование сообщения в смартфоне");
         smartPhone.createMail("Создаем новое сообщение в смартфоне");
         smartPhone.sendMail("Отправляем сообщение через смартфон");
-        DialPhone dialPhone = new DialPhone("Panasonic", 5525, "Yes");
+        DialPhone dialPhone = new DialPhone();
         dialPhone.powerOn();
         dialPhone.powerOff();
         dialPhone.call();
         dialPhone.autoAnswer();
-        Multicooker2 multicooker = new Multicooker2("LG", 1500);
+        Multicooker2 multicooker = new Multicooker2();
         multicooker.switchProgram(5);
         multicooker.cook();
-        Oven oven = new Oven("Power", 1000);
+        Oven oven = new Oven();
         oven.initTimer(10);
         oven.cook();
         Post post = new Post();
         post.createMail("Создаем новое сообщение");
         post.sendMail("Отправляем созданное сообщение");
-        abstractDevice(mobile, dialPhone, smartPhone, multicooker, oven);
-        mailSender(smartPhone, post);
+        powerOff(mobile, dialPhone, multicooker, oven, smartPhone);
+        sendMail(smartPhone, post);
     }
 
-    public static void abstractDevice(AbstractDevice... abstractDevices) {
-        System.out.println(Arrays.toString(abstractDevices) + " - устройства отключены");
+    public static void powerOff(AbstractDevice... devices) {
+        for (AbstractDevice device : devices) {
+            device.powerOff();
+        }
     }
 
-    public static void mailSender(MailSender... mailSenders) {
-        System.out.println(Arrays.toString(mailSenders) + " - отправляет письма");
+    public static void sendMail(MailSender... mailSenders) {
+        for (MailSender mailSender : mailSenders) {
+            mailSender.sendMail("");
+        }
     }
 }
 

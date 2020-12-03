@@ -9,7 +9,7 @@ class Post implements MailSender {
 
     @Override
     public void sendMail(String mail) {
-        System.out.println("Отправляем созданное сообщение");
+        System.out.println("Отправляем созданное сообщение по почте");
     }
 
     @Override

@@ -4,11 +4,6 @@ abstract class AbstractDevice {
     private String name;
     private int serialNumber;
 
-    public AbstractDevice(String name, int serialNumber) {
-        this.name = name;
-        this.serialNumber = serialNumber;
-    }
-
     abstract void powerOn();
 
     abstract void powerOff();

@@ -3,11 +3,6 @@ package com.company;
 public class DialPhone extends Phone implements Caller {
     private String hasAnswerphone;
 
-    public DialPhone(String name, int serialNumber, String hasAnswerphone) {
-        super(name, serialNumber);
-        this.hasAnswerphone = hasAnswerphone;
-    }
-
     @Override
     public void call() {
         System.out.println("Поднимаем трубку, набираем номер, звоним");

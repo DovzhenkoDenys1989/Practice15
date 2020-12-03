@@ -1,9 +1,6 @@
 package com.company;
 
 abstract class Multicooker extends AbstractDevice {
-    public Multicooker(String name, int serialNumber) {
-        super(name, serialNumber);
-    }
 
     @Override
     void powerOn() {

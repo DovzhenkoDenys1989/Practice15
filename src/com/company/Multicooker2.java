@@ -1,9 +1,6 @@
 package com.company;
 
 class Multicooker2 extends Multicooker {
-    public Multicooker2(String name, int serialNumber) {
-        super(name, serialNumber);
-    }
 
     @Override
     void cook() {

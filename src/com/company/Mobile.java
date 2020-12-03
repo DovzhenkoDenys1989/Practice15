@@ -4,12 +4,6 @@ class Mobile extends Phone {
     private int simCount;
     private String display;
 
-    public Mobile(String name, int serialNumber, int simCount, String display) {
-        super(name, serialNumber);
-        this.simCount = simCount;
-        this.display = display;
-    }
-
     @Override
     void call() {
         System.out.println("Выбираем контакт из меню, звоним");

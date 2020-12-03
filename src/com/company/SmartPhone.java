@@ -3,11 +3,6 @@ package com.company;
 class SmartPhone extends Mobile implements Caller, EmailSender {
     private String os;
 
-    public SmartPhone(String name, int serialNumber, int simCount, String display, String os) {
-        super(name, serialNumber, simCount, display);
-        this.os = os;
-    }
-
     void runApp() {
         System.out.println("Запускаем мобильное приложение в смартфоне");
     }
